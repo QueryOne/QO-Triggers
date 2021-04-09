@@ -1,0 +1,180 @@
+
+/*
+  Divided rules into 
+  - Positions & Sizes
+  - Styling & Design
+  - Behaviours
+  - Fonts
+ */
+
+/* Positions & Sizes */
+#subpanel-1, #subpanel-2, #subpanel-3 {
+  position    : absolute;
+  right       : calc(200px - 22px);
+  bottom      : calc(0% - 1px);
+  height      : calc(100% + 2px);
+  min-height  : 20px;
+  width       : 22px;
+}
+#subpanel-1 .subpanel-display {
+  position    : absolute;
+  top         : 50%;
+  left        : 50%;
+  transform   : translate( -50%, -53% );
+}
+#subpanel-2 {
+  right       : calc(200px - 22px - 22px - 3px);
+}
+#subpanel-3 {
+  right       : calc(200px - 22px - 22px - 3px - 22px - 3px);
+}
+#subpanel-3 .subpanel-display {
+  position    : absolute;
+  top         : 50%;
+  left        : 50%;
+  transform   : translate( -50%, -53% );
+}
+#subpanel-ping, #subpanel-performance {
+  position    : absolute;
+  top         : 0%;
+  height      : 100%;
+  width       : 35px;
+}
+#subpanel-ping {
+  right       : calc(5px + 14px + 8px);
+}
+#subpanel-performance {
+  right       : calc(5px + 14px + 8px + 35px + 5px);
+}
+#subpanel-connection {
+  position    : absolute;
+  right       : 5px;
+  top         : 0%;
+  height      : 100%;
+  width       : 14px;
+}
+#subpanel-connection .internal {
+  position    : absolute;
+  left        : 50%;
+  top         : 50%;
+  height      : 9px;
+  width       : 9px;
+  transform   : translate(-50%, -55%);
+}
+
+/* Styling & Design */
+#subpanel-1, #subpanel-2, #subpanel-3 {
+  border          : 0px solid rgba( 255,   1,   1, 1.00 );
+  border-top      : 1px solid rgba(  55,  55,  55, 1.00 );
+  background      : rgba(  44,  44,  44, 1.00 );
+  background-image: url('./resources/raster.png') !important;
+}
+#subpanel-1.connected {
+  background      : rgba( 43, 67, 43, 1.00 );
+}
+#subpanel-1:hover {
+  background      : rgba(  76,  76,  76, 1.00 );
+  border-top      : 1px solid rgba(  15,  15,  15, 1.00 );
+}
+#subpanel-2 {
+  background      : rgba(  76,  76,  76, 1.00 );
+  border-top      : 1px solid rgba(  88,  88,  88, 1.00 );
+}
+#subpanel-3 {
+  background      : rgba(  98,  98,  98, 1.00 );
+  border-top      : 1px solid rgba( 111, 111, 111, 1.00 );
+}
+#subpanel-3:hover {
+  background      : rgba(  98,  98,  98, 1.00 );
+  border-top      : 1px solid rgba(  15,  15,  15, 1.00 );
+}
+#subpanel-3.active {
+  background      : rgba( 191, 144,  23, 1.00 );
+  border-top      : 1px solid rgba( 212, 163,  38, 1.00 );
+}
+#subpanel-connection .internal {
+  border-radius   : 50%;
+  opacity         : 75%;
+}
+#subpanel-connection.closed .internal {
+  background-color: rgba( 255,   1,    1, 1.00 );
+  box-shadow      : rgba( 0, 0, 0, 0.1 ) 0 -1px 2px 1px, inset #441313 0 -3px 3px, rgba( 255, 0, 0, 0.5 ) 0 1px 3px;
+}
+#subpanel-connection.connected .internal {
+  background-color: #ABFF00;
+  box-shadow      : rgba( 0, 0, 0, 0.1 ) 0 -1px 2px 1px, inset rgba( 48, 71, 1, 0.85 ) 0 -3px 3px, rgba( 137, 233, 1, 1 ) 0 1px 3px;
+}
+#subpanel-connection.connecting .internal {
+  background-color: #FF0;
+  box-shadow      : rgba( 0, 0, 0, 0.1 ) 0 -1px 2px 1px, inset #808002 0 -3px 3px, #FF0 0 1px 3px;
+
+ -webkit-animation: blinkYellow 1s infinite;
+  -moz-animation  : blinkYellow 1s infinite;
+  -ms-animation   : blinkYellow 1s infinite;
+  -o-animation    : blinkYellow 1s infinite;
+  animation       : blinkYellow 1s infinite;
+}
+
+/* Behaviours */
+#subpanel-1, #subpanel-2, #subpanel-3 { cursor: pointer; }
+
+#subpanel-1:hover div, #subpanel-2:hover div { display: block; z-index: 999; }
+
+#subpanel-3 {
+  user-select : none;
+}
+
+/* Fonts */
+#subpanel-1 .subpanel-display, #subpanel-3 .subpanel-display {
+  font-family: 'Overpass','Lekton', sans-serif;
+  font-size  : 9pt;
+}
+#subpanel-1 .subpanel-display {
+  color      : rgba( 101, 101, 101, 1.00 );
+}
+#subpanel-1:hover .subpanel-display {
+  color      : rgba( 144, 144, 144, 1.00 );
+}
+#subpanel-3 .subpanel-display {
+  color      : rgba(  44,  44,  44, 1.00 );
+}
+#subpanel-3:hover .subpanel-display {
+  color      : rgba( 144, 144, 144, 1.00 );
+}
+#subpanel-3.active .subpanel-display {
+  color      : rgba( 232, 183,  56, 1.00 );
+}
+#subpanel-ping, #subpanel-performance {
+  font-family: 'Overpass','Lekton', sans-serif;
+  font-size  : 8pt;
+  color      : rgba(  74,  74,  74, 1.00 );
+  line-height: 26px;
+  text-align : right;
+}
+
+/* Animations */
+@-webkit-keyframes blinkYellow {
+    from { background-color: #FF0; }
+    50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 2px 1px, inset #808002 0 -3px 3px, #FF0 0 1px 0; }
+    to { background-color: #FF0; }
+}
+@-moz-keyframes blinkYellow {
+    from { background-color: #FF0; }
+    50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 2px 1px, inset #808002 0 -3px 3px, #FF0 0 1px 0; }
+    to { background-color: #FF0; }
+}
+@-ms-keyframes blinkYellow {
+    from { background-color: #FF0; }
+    50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 2px 1px, inset #808002 0 -3px 3px, #FF0 0 1px 0; }
+    to { background-color: #FF0; }
+}
+@-o-keyframes blinkYellow {
+    from { background-color: #FF0; }
+    50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 2px 1px, inset #808002 0 -3px 3px, #FF0 0 1px 0; }
+    to { background-color: #FF0; }
+}
+@keyframes blinkYellow {
+    from { background-color: #FF0; }
+    50% { background-color: #AA0; box-shadow: rgba(0, 0, 0, 0.1) 0 -1px 2px 1px, inset #808002 0 -3px 3px, #FF0 0 1px 0; }
+    to { background-color: #FF0; }
+}
