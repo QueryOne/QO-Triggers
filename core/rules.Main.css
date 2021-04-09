@@ -1,0 +1,159 @@
+/*
+  Divided rules into 
+  - Positions & Sizes
+  - Styling & Design
+  - Behaviours
+  - Fonts
+ */
+
+/* Positions & Sizes */
+body {
+  overflow   : hidden;
+  margin     : 0px;
+  padding    : 0px;
+  max-width  : 100%;
+}
+#container {
+  position   : absolute;
+  height     : 100%;
+  width      : 100%;
+  max-width  : 100%;
+}
+#background {
+  position   : absolute;
+  height     : 100%;
+  width      : 100%;
+  z-index    : -50;
+}
+#output-container {
+  position   : absolute;
+  left       : 0%;
+  top        : 0%;
+  height     : 100%;
+  width      : 100%;
+}
+#output {
+  position     : absolute;
+  width        : calc(100% - 4px - 6px);
+  height       : calc(100% - 24px);
+  padding-left : 4px;
+  padding-right: 6px;
+}
+#addenda {
+  position     : absolute;
+  right        : 0px;
+  top          : 20%;
+  height       : 60%;
+  width        : 35%;
+}
+#input {
+  position     : absolute;
+  top          : 0%;
+  width        : calc(100% - 180px - 8px);
+  min-width    : 300px;
+  height       : 24px;
+  padding      : 0px;
+  padding-left : 0.2em;
+  padding-right: 11px;
+}
+#panel {
+  position     : absolute;
+  left         : 0%;
+  bottom       : 0%;
+  height       : 24px;
+  width        : 100%;
+}
+#subpanel {
+  position     : absolute;
+  left         : calc(100% - 180px + 7px);
+  top          : 0%;
+  width        : calc(180px - 7px);
+  height       : 100%;
+}
+
+/* Styling & Design */
+::selection { background: rgba(95,95,95,0.36); } /* WebKit/Blink Browsers */ 
+
+#subpanel { cursor: pointer; }
+
+body {
+  background: rgba(  23,  39,  45, 1.00 );
+  background: rgba(  13,  21,  21, 1.00 );
+  background-attachment: fixed; /* important */
+}
+#output {
+  background: rgba(   1,   1,   1, 0.67 );
+}
+#output a:link    {color:inherit; background-color:transparent; text-decoration:underline rgba(67,67,67,0.88);}
+#output a:visited {color:inherit; background-color:transparent; text-decoration:underline rgba(67,67,67,0.88);}
+#output a:hover   {color:inherit; background-color:transparent; text-decoration:underline rgba(67,67,67,0.88);} 
+#output a:active  {color:inherit; background-color:transparent; text-decoration:underline rgba(67,67,67,0.88);}
+#input { 
+  background: rgba(   1,   1,   1, 0.55 );
+  border    : none;
+  border-top: 1px solid rgba( 255, 255, 255, 0.22 );
+}
+#input:focus {
+  background: rgba(   1,   1,   1, 0.24 );
+}
+
+#addenda {
+  background: rgba(  14,  14,  14, 0.83 );
+  border          : 1px solid rgba( 141, 141, 141, 0.43 );
+  border-radius   : 5px; 
+}
+#subpanel {
+  background: rgba( 15, 15, 15, 0.55);
+  border-top: 1px solid rgba( 255, 255, 255, 0.33 );
+  background-image: url('./resources/raster.png');
+}
+
+/* Behaviours */
+body::-webkit-scrollbar, #output::-webkit-scrollbar { display: none; }
+
+.hidden { display: none; }
+
+#container, #addenda {
+  overflow   : hidden;
+}
+#output {
+  overflow-x : hidden;
+  overflow-y : scroll;
+}
+#input {
+  resize     : none;
+  outline    : none;
+}
+#panel {
+  transition : all 270ms; 
+}
+
+/* Fonts */
+@font-face { font-family: Overpass; src: url('./resources/overpass-mono-light.otf'); }
+@font-face { font-family: CodeNewRoman; src: url('./resources/Code-New-Roman.otf'); }
+@font-face { font-family: Lekton; src: url('./resources/Lekton-Regular.ttf'); }
+
+#output {
+  font-family: 'Lekton', sans-serif;
+  font-size  : 9pt;
+  line-height: 13px;
+  white-space: pre-wrap;
+  color      : rgba( 195, 205, 220, 1.00 );
+}
+#input {
+  font-family: 'CodeNewRoman', serif;
+  font-size  : 10pt;
+  line-height: 24px;
+  color      : rgba(167,167,167,0.67);
+}
+#addenda {
+  font-family: 'Lekton', Times, serif;
+  font-size  : 9pt;
+  line-height: 13px;
+  white-space: pre-wrap;
+}
+.timestamp {
+  font-weight    : normal;
+  text-decoration: none;
+  color          : rgba( 68, 68, 68, 0.67);
+}
