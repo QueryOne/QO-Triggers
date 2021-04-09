@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html><head><title>QO</title>
+  <link rel='icon' type='image/png' href='./core/resources/icon.png' />
+  <link href="https://fonts.googleapis.com/css?family=Lekton|Overpass+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+  <link href="https://code.jquery.com/ui/1.12.1/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
+  <script
+     src="https://code.jquery.com/jquery-3.4.1.min.js" 
+     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+     crossorigin="anonymous"></script>
+  <script
+     src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+     integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+     crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/fastdom/1.0.9/fastdom.min.js'></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.7/ace.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.7/mode-javascript.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.7/theme-monokai.js"></script>
+ <style>
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+ body {
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgba(23,39,45,1);
+  background-attachment: fixed; /* important */ }
+  body::-webkit-scrollbar { 
+    display: none; }
+ </style>
+ </head>
+ <body>
+ <div id='container'>
+   <div id='background'></div>
+   <div id='output-container'>
+     <div id='addenda' class='hidden'></div>
+     <div id='output'></div>
+     <div id='panel'>
+       <textarea id='input'></textarea>
+       <div id='subpanel'></div>
+     </div>
+   </div>
+ </div>
+ </body>
+ <script src='./core/Preloader.js'></script>
+ <script>
+  $(window).on('load', function() { if (Preloader) { Preloader.ready(true) }; /* Run it the first time */ Preloader.complete(); })
+
+  // https://github.com/smellyshovel/custom-context-menu
+ 
+  /*
+   https://www.pngegg.com/en/png-dxumy
+   https://www.pngitem.com/middle/iJmwow_clip-art-old-photo-effect-photoshop-retro-filter/
+   https://www.pngguru.com/free-transparent-background-png-clipart-bobyh
+   https://toppng.com/photo/164614/report-abuse-old-effect-on-pictures
+   https://www.cleanpng.com/png-tattoo-chinese-dragon-japanese-dragon-clip-art-dra-2950837/
+   https://toppng.com/photo/104631
+   https://toppng.com/wolf-transparent-tattoo-art-design-wolf-logo-transparent-background-PNG-free-PNG-Images_218190?search-result=transparent-mote
+   https://toppng.com/free-png-rose-tribal-design-png-image-with-transparent-wolf-tribal-tattoo-drawi-PNG-free-PNG-Images_181867
+   https://www.pngguru.com/free-transparent-background-png-clipart-bktte
+
+   https://www.pngitem.com/middle/hmJiTxh_fantasy-characters-with-transparent-background-hd-png-download/
+   https://www.hiclipart.com/free-transparent-background-png-clipart-dnqga
+
+   Icons made by <a href="https://www.flaticon.com/authors/google" title="Google">Google</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+   Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+   */
+ </script>
+</html>
