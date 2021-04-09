@@ -1,0 +1,85 @@
+
+span.normal, div.normal {
+  font-weight    : normal;
+  text-decoration: none;
+}
+span.mute        {
+  font-weight    : normal;
+  text-decoration: none;
+}
+span.bold      { font-weight: 550; }
+span.bold.cyan { font-weight: normal; }
+span.underline { text-decoration: underline; }
+span.invisible { color : rgba( 1, 1, 1, 0 ); }
+
+/* Colours */
+span.normal, div.normal { color: rgba( 185, 185, 185, 1.00 ); }
+span.mute        { color: rgba( 108, 108, 108, 1.00 ); }
+
+span.triggered   { color: rgba(  32,  89,  66, 1.00 ); }
+span.untrigger   { color: rgba( 132,  89,  66, 0.67 ); }
+span.mutrigger   { color: rgba(  31,  31,  31, 1.00 ); }
+span.errortrig   { color: rgba( 222,  45,  45, 1.00 ); }
+span.unmatchTr   { color: rgba(  45,  45,  77, 0.67 ); }
+span.sytrigger   { color: rgba( 120, 116, 193, 1.00 ); }
+
+span.master      { color: rgba(  90,  40, 199, 1.00 ); }
+span.git         { color: rgba(  84, 176, 124, 1.00 ); }
+span.gitbracket  { color: rgba(  49, 107,  74, 1.00 ); }
+
+span.self        { color: #838383; }
+
+span.gray        { color: rgba( 222, 222, 222, 1.00 ); }
+span.black       { color: rgba(  55,  55,  55, 1.00 ); }
+span.deepblack   { color: rgba(  14,  14,  14, 1.00 ); }
+span.midnight    { color: rgba(   1,   1,   1, 0.55 ); }
+
+span.red         { color: #ad4005; }
+span.green       { color: #098f26; }
+span.blue        { color: #8a9597; }
+span.yellow      { color: #e3d96f; }
+span.magenta     { color: #bd0fdb; }
+span.white       { color: #ffffff; }
+span.cyan        { color: #74dad9; }
+span.bold.cyan   { color: #1ca6eb; } /* ! */
+
+span.black-bg    { background: #777777; }
+span.red-bg      { background: #d08356; }
+span.green-bg    { background: #a2a96f; }
+span.yellow-bg   { background: #e3d96f; }
+span.magenta-bg  { background: #be96b3; }
+span.blue-bg     { background: rgba(   5,  48,  68, 1.00 ); }
+span.cyan-bg     { background: rgba(   3, 130, 188, 1.00 ); }
+span.white-bg    { background: rgba( 167, 173, 175, 1.00 ); }
+span.grey-bg     { background: rgba(  25,  25,  25, 0.67 ); }
+
+/* Slight alterations to defaults */
+span.bold.cyan     { color: #1ca6eb; }
+.prompt span.green { color: #a2a96f; } /* Prefer my prompt to have a slightly darker green */
+
+/* Custom Colours */
+span.violent     { color: rgba( 161,  59, 239, 1.00 ); }
+span.echo        { color: rgba( 125,  45,  85, 1.00 ); }
+span.sysecho     { color: rgba( 120, 116, 193, 1.00 ); }
+
+span.violent     { color: rgba( 161,  59, 239, 1.00 ); }
+span.balBracket  { color: rgba(  50,  50, 220, 1.00 ); }
+span.bal         { color: rgba( 100, 125, 155, 1.00 ); }
+span.eqBracket   { color: rgba( 125,  50, 200, 1.00 ); }
+span.eq          { color: rgba( 130, 105, 155, 1.00 ); }
+span.darkyellow  { color: rgba( 175, 175,  36, 1.00 ); }
+span.darkred     { color: rgba( 185,  15,  65, 1.00 ); }
+span.grey        { color: rgba(  75,  75,  75, 1.00 ); }
+span.turquoise   { color: rgba(  80, 135, 145, 1.00 ); }
+span.link        { color: rgba(  80, 135, 145, 1.00 ); }
+span.seagreen    { color: rgba(  15, 115,  75, 1.00 ); }
+span.topaz       { color: rgba( 115, 115,   7, 1.00 ); }
+span.orange      { color: rgba( 235, 124,  21, 1.00 ); }
+
+span.hotred      { color: rgba( 240,   7,  58, 1.00 ); }
+span.hotgreen    { color: rgba(  45, 222,  45, 1.00 ); }
+
+span.cureBlue    { color: rgba(  66, 117, 245, 1.00 ); }
+span.curePurple  { color: rgba( 185,  79, 255, 1.00 ); }
+
+span.lightPurple { color: rgba( 182,  92, 255, 0.34 ); }
